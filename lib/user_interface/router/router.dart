@@ -1,3 +1,4 @@
+import 'package:flutter_template/user_interface/pages/auth_page.dart';
 import 'package:go_router/go_router.dart';
 import '../pages/detail_page.dart'; //「routed」はプロジェクト名です。
 
@@ -44,7 +45,7 @@ final router = GoRouter(
       pageBuilder: (context, state) => NoTransitionPage<void>(
         key: state.pageKey,
         restorationId: state.pageKey.value,
-        child: const LoginPage(),
+        child: const MainView(),
       ),
       builder: (context, state) => const LoginPage(),
     ),
