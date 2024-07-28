@@ -1,5 +1,10 @@
-class Todo {
-  const Todo(this.content);
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-  final String content;
+part 'todo.freezed.dart';
+
+@freezed
+class Todo with _$Todo {
+  const factory Todo({
+    required String content,
+  }) = _Todo;
 }

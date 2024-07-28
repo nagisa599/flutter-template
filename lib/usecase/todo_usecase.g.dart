@@ -21,7 +21,7 @@ final findTodosUseCaseProvider = AutoDisposeFutureProvider<List<Todo>>.internal(
 );
 
 typedef FindTodosUseCaseRef = AutoDisposeFutureProviderRef<List<Todo>>;
-String _$addTodoUseCaseHash() => r'e554fd26a065b04e4fca0647dff4d236b966885a';
+String _$addTodoUseCaseHash() => r'87f5400d482d77ff4ee0792ebc0da115515e9969';
 
 /// Copied from Dart SDK
 class _SystemHash {

@@ -1,11 +1,11 @@
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../domain/repository_interface.dart';
-import '../../domain/todo/todo.dart';
+import '../repository/todo_repository.dart';
+import '../todo.dart';
 
 const sharedPreferencesKey = "todos";
 
 // 実際の実装
-class SharedPreferencesTodosRepository implements Repository<Todo> {
+class SharedPreferencesTodosRepository implements TodoRepository<Todo> {
   @override
   Future<bool> add(Todo item) async {
     final sharedPreferences = await SharedPreferences.getInstance();
@@ -26,7 +26,7 @@ class SharedPreferencesTodosRepository implements Repository<Todo> {
     final sharedPreferences = await SharedPreferences.getInstance();
     return sharedPreferences
             .getStringList(sharedPreferencesKey)
-            ?.map((item) => Todo(item))
+            ?.map((item) => Todo(content: item))
             .toList(growable: false) ??
         [];
   }

@@ -1,8 +1,8 @@
-import '../../domain/repository_interface.dart';
-import '../../domain/todo/todo.dart';
+import '../repository/todo_repository.dart';
+import '../todo.dart';
 
 // モック
-class MockTodosRepository implements Repository<Todo> {
+class MockTodosRepository implements TodoRepository<Todo> {
   @override
   Future<bool> add(Todo item) async {
     // スタブ
@@ -19,10 +19,10 @@ class MockTodosRepository implements Repository<Todo> {
   Future<List<Todo>> findAll() async {
     // スタブ
     return const [
-      Todo("りんご"),
-      Todo("バナナ"),
-      Todo("メロン"),
-      Todo("電池"),
+      Todo(content: "りんご"),
+      Todo(content: "バナナ"),
+      Todo(content: "メロン"),
+      Todo(content: "電池"),
     ];
   }
 

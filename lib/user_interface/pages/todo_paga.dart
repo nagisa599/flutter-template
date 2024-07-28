@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_template/usecase/todo_usecase.dart';
 
-import '../../domain/todo/todo.dart';
+import '../../../domain/todo/todo.dart';
 
 class TodosPage extends ConsumerWidget {
   TodosPage({super.key});

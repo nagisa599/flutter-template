@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../domain/todo/todo.dart';
-import '../../domain/todo/todo_repository.dart';
+import '../domain/todo/repository/todo_repository.dart';
 
 part 'todo_usecase.g.dart';
 
@@ -11,7 +11,8 @@ Future<List<Todo>> findTodosUseCase(FindTodosUseCaseRef ref) async {
 
 @riverpod
 Future<void> addTodoUseCase(AddTodoUseCaseRef ref, String content) async {
-  await ref.read(todosRepositoryProvider).add(Todo(content));
+  await ref.read(todosRepositoryProvider).add(Todo(content: content));
+  // 呼び出す
   ref.invalidate(findTodosUseCaseProvider);
 }
 

@@ -38,6 +38,8 @@ dependencies:
   riverpod_annotation: ^2.3.3
   shared_preferences:
   freezed_annotation: ^2.4.4
+  freezed: ^2.5.2
+  go_router: ^14.2.1
 
 dev_dependencies:
   flutter_test:
