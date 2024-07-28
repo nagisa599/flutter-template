@@ -1,8 +1,23 @@
 # flutter
 
-#### riverpod 自動生成の監視
+## エンジニア向けドキュメント
 
-```
-dart run build_runner watch
-```
-# flutter-template
+## 前提
+
+- 変更するファイルはすべて[lib/](./lib/)にあります。
+
+## 利用技術
+
+| 技術             | 利用しているライブラリやツール等 |
+| ---------------- | -------------------------------- |
+| 言語             | dart                             |
+| ローカル環境構築 | simulator android studio         |
+| 状態管理         | riverpod                         |
+| 画面遷移         | go router                        |
+
+## インデックス
+
+- [ローカルの環境構築](./docs/local-setup.md)
+- [ディレクトリ構成と各 package の振る舞い](./docs/directory-structure.md)
+- [riverpod の Code 生成方法](./docs/gqlgen.md)
+- [テストの書き方](./docs/add-test.md)
