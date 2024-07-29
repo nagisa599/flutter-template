@@ -23,4 +23,5 @@ Future<void> logoutUseCase(LogoutUseCaseRef ref) async {
   await auth0.webAuthentication().logout();
   // shared_preferencesのログアウト処理
   await ref.read(authRepositoryProvider).deleteAuth();
+  ref.invalidate(checkLoggedInUseCaseProvider);
 }

@@ -20,7 +20,7 @@ final loginUseCaseProvider = AutoDisposeFutureProvider<void>.internal(
 );
 
 typedef LoginUseCaseRef = AutoDisposeFutureProviderRef<void>;
-String _$logoutUseCaseHash() => r'7662e1cc816d10da39799f7f452769e4b0b21583';
+String _$logoutUseCaseHash() => r'b0ab20d5ac57a84ddb5520a9b3a1c19423716f84';
 
 /// See also [logoutUseCase].
 @ProviderFor(logoutUseCase)

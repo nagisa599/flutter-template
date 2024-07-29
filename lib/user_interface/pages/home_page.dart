@@ -9,9 +9,6 @@ class HomePage extends ConsumerWidget {
   const HomePage({super.key});
   void logout(WidgetRef ref, BuildContext context) {
     ref.read(logoutUseCaseProvider);
-    if (context.mounted) {
-      context.go('/login');
-    }
   }
 
   @override

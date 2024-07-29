@@ -32,7 +32,7 @@ class MyApp extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       // MaterialAppにrouterを追加。
       routerConfig: router, //goRouterを基盤に設定する。
-      title: 'riverpod ✖️ go_router',
+      title: 'template',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
