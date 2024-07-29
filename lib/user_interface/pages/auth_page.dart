@@ -8,7 +8,6 @@ class MainView extends ConsumerWidget {
   const MainView({Key? key}) : super(key: key);
 
   void login(WidgetRef ref) {
-    print("ここは");
     ref.read(loginUseCaseProvider);
   }
 
@@ -22,9 +21,6 @@ class MainView extends ConsumerWidget {
               // Use a Universal Link callback URL on iOS 17.4+ / macOS 14.4+
               // useHTTPS is ignored on Android
               login(ref);
-              if (context.mounted) {
-                context.go('/login/redirection');
-              }
             },
             child: const Text("Log in"))
       ],

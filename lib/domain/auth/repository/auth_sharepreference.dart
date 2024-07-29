@@ -9,8 +9,6 @@ class SharedPreferencesAuthRepository implements AuthRepository<Auth> {
   @override
   Future<bool> registerAuth(Auth auth) async {
     final sharedPreferences = await SharedPreferences.getInstance();
-    print("登録する時のauth");
-    print(auth);
     return await sharedPreferences.setString(
         SharedPreferencesKey, auth.toString());
   }
