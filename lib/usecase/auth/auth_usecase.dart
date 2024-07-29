@@ -4,7 +4,7 @@ import 'package:flutter_template/user_interface/common/constants/auth0.dart';
 import 'package:flutter_template/user_interface/router/router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part "auth_usecase.g.dart";
+part 'auth_usecase.g.dart';
 
 @riverpod
 Future<void> loginUseCase(LoginUseCaseRef ref) async {

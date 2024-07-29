@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
                     context.go('/login/redirection');
                   }
                 },
-                child: Text('ログインする'))
+                child: const Text('ログインする'))
           ],
         ),
       ),
