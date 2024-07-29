@@ -14,7 +14,7 @@ class TodosPage extends ConsumerWidget {
     final todos = ref.watch(findTodosUseCaseProvider);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("やること"),
+        title: const Text('やること'),
       ),
       body: switch (todos) {
         AsyncData(:final value) => ListView.builder(
@@ -51,8 +51,8 @@ class TodosPage extends ConsumerWidget {
             },
             itemCount: value.length + 1,
           ),
-        AsyncError(:final error, :final stackTrace) => const Center(
-            child: Text("読み込みエラー"),
+        AsyncError() => const Center(
+            child: Text('読み込みエラー'),
           ),
         _ => const CircularProgressIndicator(),
       },

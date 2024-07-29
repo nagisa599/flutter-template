@@ -8,6 +8,5 @@ abstract class AuthRepository<T> {
   Future<bool> deleteAuth();
 }
 
-@riverpod
 final authRepositoryProvider =
     Provider<AuthRepository<Auth>>((_) => throw UnimplementedError());

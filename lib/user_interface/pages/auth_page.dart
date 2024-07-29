@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_template/usecase/auth/auth_usecase.dart';
 
 class MainView extends ConsumerWidget {
-  const MainView({Key? key}) : super(key: key);
+  const MainView({super.key});
 
   void login(WidgetRef ref) {
     ref.read(loginUseCaseProvider);
@@ -20,7 +20,7 @@ class MainView extends ConsumerWidget {
               // useHTTPS is ignored on Android
               login(ref);
             },
-            child: const Text("Log in"))
+            child: const Text('Log in'))
       ],
     );
   }
