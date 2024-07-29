@@ -1,8 +1,7 @@
 import 'package:shared_preferences/shared_preferences.dart';
 import '../repository/todo_repository.dart';
-import '../todo.dart';
 
-const sharedPreferencesKey = "todos";
+const sharedPreferencesKey = 'todos';
 
 // 実際の実装
 class SharedPreferencesTodosRepository implements TodoRepository<Todo> {

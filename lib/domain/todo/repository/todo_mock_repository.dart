@@ -1,5 +1,4 @@
 import '../repository/todo_repository.dart';
-import '../todo.dart';
 
 // モック
 class MockTodosRepository implements TodoRepository<Todo> {
@@ -19,10 +18,10 @@ class MockTodosRepository implements TodoRepository<Todo> {
   Future<List<Todo>> findAll() async {
     // スタブ
     return const [
-      Todo(content: "りんご"),
-      Todo(content: "バナナ"),
-      Todo(content: "メロン"),
-      Todo(content: "電池"),
+      Todo(content: 'りんご'),
+      Todo(content: 'バナナ'),
+      Todo(content: 'メロン'),
+      Todo(content: '電池'),
     ];
   }
 
