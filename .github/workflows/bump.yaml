@@ -58,6 +58,6 @@ jobs:
 
       - name: create tag and release note
         env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release create v$BUMP_VERSION --generate-notes
