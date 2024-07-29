@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import '../../domain/todo/todo.dart';
-import '../domain/todo/repository/todo_repository.dart';
+import '../../../domain/todo/todo.dart';
+import '../../domain/todo/repository/todo_repository.dart';
 
 part 'todo_usecase.g.dart';
 

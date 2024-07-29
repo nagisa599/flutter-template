@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_template/domain/auth/repository/auth_repository.dart';
+import 'package:flutter_template/domain/auth/repository/auth_sharepreference.dart';
 import 'package:flutter_template/domain/todo/repository/todo_repository.dart';
 import 'package:flutter_template/domain/todo/repository/todo_sharepreference.dart';
 import 'package:flutter_template/user_interface/pages/todo_paga.dart';
@@ -12,25 +14,27 @@ void main() {
       overrides: [
         todosRepositoryProvider
             .overrideWithValue(SharedPreferencesTodosRepository()),
+        authRepositoryProvider
+            .overrideWithValue(SharedPreferencesAuthRepository()),
         // todosRepositoryProvider.overrideWithValue(MockTodosRepository()),
       ],
-      child: const MyApp(),
+      child: MyApp(),
     ),
   );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
+class MyApp extends ConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final router = ref.watch(routerProvider);
+
     return MaterialApp.router(
-      routerConfig: router,
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      // MaterialAppにrouterを追加。
+      routerConfig: router, //goRouterを基盤に設定する。
+      title: 'riverpod ✖️ go_router',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        primarySwatch: Colors.blue,
       ),
     );
   }

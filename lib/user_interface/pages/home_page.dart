@@ -1,22 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_template/usecase/auth/auth_usecase.dart';
+import 'package:flutter_template/user_interface/router/router.dart';
 import 'package:go_router/go_router.dart';
-import '../pages/sessions.dart'; //「routed」はプロジェクト名です。
+//「routed」はプロジェクト名です。
 
-class HomePage extends StatelessWidget {
+class HomePage extends ConsumerWidget {
   const HomePage({super.key});
+  void logout(WidgetRef ref, BuildContext context) {
+    ref.read(logoutUseCaseProvider);
+    if (context.mounted) {
+      context.go('/login');
+    }
+  }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
         title: Text('ホーム'),
         actions: [
           TextButton(
               onPressed: () async {
-                await logout();
-                if (context.mounted) {
-                  context.go('/login');
-                }
+                logout(ref, context);
               },
               child: Text('ログアウト'))
         ],
