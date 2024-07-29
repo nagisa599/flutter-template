@@ -4,7 +4,6 @@ import 'package:flutter_template/domain/auth/repository/auth_repository.dart';
 import 'package:flutter_template/domain/auth/repository/auth_sharepreference.dart';
 import 'package:flutter_template/domain/todo/repository/todo_repository.dart';
 import 'package:flutter_template/domain/todo/repository/todo_sharepreference.dart';
-import 'package:flutter_template/user_interface/pages/todo_paga.dart';
 import 'package:flutter_template/user_interface/router/router.dart';
 
 void main() {
