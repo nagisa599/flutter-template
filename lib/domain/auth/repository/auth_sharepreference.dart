@@ -1,9 +1,8 @@
 import 'package:flutter_template/domain/auth/auth.dart';
 import 'package:flutter_template/domain/auth/repository/auth_repository.dart';
-import 'package:flutter_template/user_interface/router/router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-const SharedPreferencesKey = "auth";
+const SharedPreferencesKey = 'auth';
 
 class SharedPreferencesAuthRepository implements AuthRepository<Auth> {
   @override

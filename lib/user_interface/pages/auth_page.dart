@@ -20,7 +20,7 @@ class MainView extends ConsumerWidget {
               // useHTTPS is ignored on Android
               login(ref);
             },
-            child: const Text("Log in"))
+            child: const Text('Log in'))
       ],
     );
   }

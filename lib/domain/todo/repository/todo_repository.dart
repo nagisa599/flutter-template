@@ -11,6 +11,5 @@ abstract class TodoRepository<T> {
   Future<bool> update(T item);
 }
 
-@riverpod
 final todosRepositoryProvider =
     Provider<TodoRepository<Todo>>((_) => throw UnimplementedError());
