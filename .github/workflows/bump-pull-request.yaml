@@ -5,7 +5,7 @@ on:
     inputs:
       bump:
         type: choice
-        description: Please Choice Bump Target
+        description: Please choose the bump target
         options:
           - build
           - patch
@@ -25,48 +25,48 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - name: checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: install flutter
+      - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: "stable"
           cache: true
 
-      - name: run flutter version
+      - name: Display Flutter version
         run: flutter --version
 
-      - name: run flutter pub get
+      - name: Run flutter pub get
         run: flutter pub get
 
-      - name: init git config
+      - name: Initialize Git configuration
         run: |
-          git config --local user.name $GIT_USER_NAME
-          git config --local user.email $GIT_USER_EMAIL
+          git config --local user.name ${{ env.GIT_USER_NAME }}
+          git config --local user.email ${{ env.GIT_USER_EMAIL }}
 
-      - name: bump up version
+      - name: Bump version
         run: |
-          echo choice: ${{ github.event.inputs.bump }}
+          echo "Choice: ${{ github.event.inputs.bump }}"
           flutter pub run cider bump ${{ github.event.inputs.bump }} --bump-build
           echo "BUMP_VERSION=$(flutter pub run cider version)" >> $GITHUB_ENV
 
-      - name: commit pubspec.yaml
+      - name: Commit changes
         run: |
-          git add -u pubspec.yaml
-          echo "Bumped version number to $BUMP_VERSION" | git commit --file=-
+          git add pubspec.yaml
+          echo "Bumped version number to ${{ env.BUMP_VERSION }}" | git commit --file=-
 
-      - name: create releaser branch
+      - name: Create release branch
         run: |
-          git checkout -b releases/$BUMP_VERSION
-          echo "RELEASE_BRANCH=releases/$BUMP_VERSION" >> $GITHUB_ENV
+          git checkout -b releases/${{ env.BUMP_VERSION }}
+          echo "RELEASE_BRANCH=releases/${{ env.BUMP_VERSION }}" >> $GITHUB_ENV
 
-      - name: push branch
+      - name: Push the branch
         run: |
-          git push -u origin $RELEASE_BRANCH
+          git push -u origin ${{ env.RELEASE_BRANCH }}
 
-      - name: create pull request
+      - name: Create pull request
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr create -B main -t "Release $BUMP_VERSION" -b "Release $BUMP_VERSION" --head $RELEASE_BRANCH
+          gh pr create -B main -t "Release ${{ env.BUMP_VERSION }}" -b "Release ${{ env.BUMP_VERSION }}" --head ${{ env.RELEASE_BRANCH }}
