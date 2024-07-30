@@ -13,8 +13,8 @@ on:
           - major
 
 env:
-  GIT_USER_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
-  GIT_USER_NAME: "github-actions[bot]"
+  GIT_USER_EMAIL: "41898282+version管理くんからの通知です@users.noreply.github.com"
+  GIT_USER_NAME: "version管理くん"
 
 permissions:
   contents: write
@@ -74,4 +74,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr create -B main -t "Release ${{ env.BUMP_VERSION }}" -b "Release ${{ env.BUMP_VERSION }}" --head ${{ env.RELEASE_BRANCH }}
+          gh pr create -B main -t "Release ${{ env.BUMP_VERSION }}" -b "リリースおめでと!${{ github.event.inputs.bump }}のリリースです。バージョンは${{ env.BUMP_VERSION }}です。" --head ${{ env.RELEASE_BRANCH }}
