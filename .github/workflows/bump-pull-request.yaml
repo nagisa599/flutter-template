@@ -61,6 +61,11 @@ jobs:
           git checkout -b releases/${{ env.BUMP_VERSION }}
           echo "RELEASE_BRANCH=releases/${{ env.BUMP_VERSION }}" >> $GITHUB_ENV
 
+      - name: Fetch and Rebase
+        run: |
+          git fetch origin main
+          git rebase origin/main
+
       - name: Push the branch
         run: |
           git push -u origin ${{ env.RELEASE_BRANCH }}
