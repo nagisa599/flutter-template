@@ -14,8 +14,8 @@
 | ローカル環境構築 | simulator android studio         |
 | 状態管理         | riverpod                         |
 | 画面遷移         | go router                        |
-| データ永続化         | sharedpreference                        |
-
+| データ永続化         | sharedpreference                        
+| CI/CD         | githubactions   Danger                         |
 ## インデックス
 
 - [ローカルの環境構築](./docs/local-step.md)
