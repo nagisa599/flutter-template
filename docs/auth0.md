@@ -10,7 +10,7 @@
 3. プログラムのコード変更
   https://github.com/nagisa599/flutter-template/blob/dc638d91be80373a5f377ed6035831dce815f7fe/lib/user_interface/common/constants/auth0.dart#L1-L6
 > [!CAUTION]
-> Negative potential consequences of an action.
+> publciで公開する場合は、必ずこのファイルをgitignoreしてください
 5. 参考 URL
    https://auth0.com/docs/quickstart/native/flutter/interactive
 
