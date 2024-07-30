@@ -19,7 +19,7 @@
 ## インデックス
 
 - [ローカルの環境構築](./docs/local-step.md)
-- [ディレクトリ構成と各 package の振る舞い](./docs/directory-structure.md)
+- [ディレクトリ構成と各 package の振る舞い](./docs/directly.md)
 - [認証(auth0の設定)](./docs/auth0.md)
 - [CI/CDについて](.docs/cicd.md)
 - [lintの設定](.docs/lint.md)
