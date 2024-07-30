@@ -18,7 +18,7 @@
 
 ## インデックス
 
-- [ローカルの環境構築](./docs/local-setup.md)
+- [ローカルの環境構築](./docs/local-step.md)
 - [ディレクトリ構成と各 package の振る舞い](./docs/directory-structure.md)
 - [認証(auth0の設定)](./docs/auth0.md)
 - [CI/CDについて](.docs/cicd.md)
