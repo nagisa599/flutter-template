@@ -21,6 +21,6 @@
 - [ローカルの環境構築](./docs/local-step.md)
 - [ディレクトリ構成](./docs/directly.md)
 - [認証(auth0の設定)](./docs/auth0.md)
-- [CI/CDについて](.docs/cicd.md)
-- [lintの設定](.docs/Lint.md)
+- [CI/CDについて](./docs/cicd.md)
+- [lintの設定](./docs/Lint.md)
 - [テストの書き方](./docs/add-test.md)
