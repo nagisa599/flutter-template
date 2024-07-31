@@ -4,6 +4,8 @@ github actionsを利用している。現在はiosのみに対応しているが
 - pull requestのタイミングで flutter analyzeとする
 - [Problem Matchers](https://github.com/actions/toolkit/blob/main/docs/problem-matchers.md)、[Danger action](https://github.com/marketplace/actions/danger-action) を使って、analyze が出力する (info|warning|error) を GitHub の File chaged に表示します
 
+<img src="https://github.com/user-attachments/assets/99c2d6f3-4101-40b6-b99a-c150abbb1e28" width="300" height="300">
+
 
 ## bump.yml　（個人開発用)
 
@@ -15,4 +17,6 @@ github actionsを利用している。現在はiosのみに対応しているが
 - releases/1.0.0+1 のようなブランチを作成する
 チーム開発や Protected branch を使っている環境を想定したワークフロー
 
+  <img src="https://github.com/user-attachments/assets/0f2966b3-3bfa-4140-a758-04f835609f23" width="300" height="300">
+ 
 ## tagging-when-merged.yml
