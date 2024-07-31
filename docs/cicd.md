@@ -16,7 +16,7 @@ github actionsを利用している。現在はiosのみに対応しているが
 - アプリバージョンの更新を含む release ブランチと Pull Request を作成する
 - releases/1.0.0+1 のようなブランチを作成する
 チーム開発や Protected branch を使っている環境を想定したワークフロー
-![スクリーンショット 2024-07-31 12 24 13](https://github.com/user-attachments/assets/0f2966b3-3bfa-4140-a758-04f835609f23)
+
   <img src="https://github.com/user-attachments/assets/0f2966b3-3bfa-4140-a758-04f835609f23" width="300" height="300">
  
 ## tagging-when-merged.yml
