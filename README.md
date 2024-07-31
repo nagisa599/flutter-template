@@ -25,3 +25,4 @@
 - [CI/CDについて](./docs/cicd.md)
 - [lintの設定](./docs/Lint.md)
 - [テストの書き方](./docs/add-test.md)
+- [トラブルシューティング](.docs/trable.md)
