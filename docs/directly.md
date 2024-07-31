@@ -57,37 +57,45 @@
 - [クラス自動生成ツール](https://app.quicktype.io/)
 
 ### domain/repository
-- apiやdb,localstorageのロジックを書くフォルダー
+- apiやdb,localstorageのなどのデータソースのやり取りを書くフォルダー
 
 ### domain/repository/〇〇_reposiroty.dart
 - 実装したい抽象クラスを記載。
 
 ### domain/repository/〇〇_sharepreference_reposiroty.dart
 - localstorageを叩く際に実装
-- 必ずdomain/repository/〇〇_reposiroty.dartの抽象クラスを実装すること
+- 必ずdomain/repository/〇〇_reposiroty.dartの抽象クラスを実装する実装クラス
 
 ### domain/repository/〇〇_mock_reposiroty.dart
 - まだapiやlocalstorageが決まっていない時にmockとして叩く方法
 
 ### usecase/〇〇/〇〇_uescase.dart
-- マイグレーションはこのディレクトリに置く
-- マイグレーションのやり方は[テーブル、カラムの追加・変更方法](./add-table.md)を参照すること
+- usecase層
+- 具体的な業務処理やデータの操作ロジックを書く
 
 ### user_interface/〇〇/page
-
+- 画面
 
 ### user_interface/〇〇/router
-- [GraphQLスキーマ](../schema.gql)から自動生成されたcodeが置かれている
+- routerによる画面遷移を記述
 
 ### common/constant
+- 固定urlやテーマ設定、apiのclient設定を記載する場所
+
 
 
 ### widgets
-- 
+- アプリで使用する共通で再利用するUIを管理します。
 
 
 ### main.dart
+アプリの一番上位(エントリーポイント)となるファイルです。
+以下のようなことを行うことが多いです。
 
+- 画面を縦に固定する
+- Firebaseの初期化処理
+- envファイルの読み込み
+- riverpodのスコープ設定
 
 
 
