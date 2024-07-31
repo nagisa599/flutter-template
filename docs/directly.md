@@ -81,6 +81,8 @@
 
 ### common/constant
 - 固定urlやテーマ設定、apiのclient設定を記載する場所
+> [!CAUTION]
+> keyなどを載せているときは、必ずgitignoreにすること
 
 
 
