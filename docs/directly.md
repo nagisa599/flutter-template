@@ -44,3 +44,50 @@
 ```
 
 # 各ディレクトリーの振る舞い
+### lib
+- [README](../README.md)にもある通り、開発時は基本的に[lib](../lib/)配下に変更を加える
+
+### docs
+- エンジニア向けのドキュメントはここに追加していく
+- GitHub上で辿りやすいように[READMEのインデックス](../README.md#インデックス)にリンクを貼ること
+
+### domain/〇〇.dart
+- 基本的に〇〇のdomainのmodelを書く。
+- [freezard](https://pub.dev/packages/freezed)を使用して、モデルを自動生成する。
+- [クラス自動生成ツール](https://app.quicktype.io/)
+
+### domain/repository
+- apiやdb,localstorageのロジックを書くフォルダー
+
+### domain/repository/〇〇_reposiroty.dart
+- 実装したい抽象クラスを記載。
+
+### domain/repository/〇〇_sharepreference_reposiroty.dart
+- localstorageを叩く際に実装
+- 必ずdomain/repository/〇〇_reposiroty.dartの抽象クラスを実装すること
+
+### domain/repository/〇〇_mock_reposiroty.dart
+- まだapiやlocalstorageが決まっていない時にmockとして叩く方法
+
+### usecase/〇〇/〇〇_uescase.dart
+- マイグレーションはこのディレクトリに置く
+- マイグレーションのやり方は[テーブル、カラムの追加・変更方法](./add-table.md)を参照すること
+
+### user_interface/〇〇/page
+
+
+### user_interface/〇〇/router
+- [GraphQLスキーマ](../schema.gql)から自動生成されたcodeが置かれている
+
+### common/constant
+
+
+### widgets
+- 
+
+
+### main.dart
+
+
+
+
