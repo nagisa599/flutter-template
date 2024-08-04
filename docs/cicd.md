@@ -20,3 +20,36 @@ github actionsを利用している。現在はiosのみに対応しているが
   <img src="https://github.com/user-attachments/assets/0f2966b3-3bfa-4140-a758-04f835609f23" width="300" height="300">
  
 ## tagging-when-merged.yml
+
+## build-ios
+
+以下のファイルを変更(../ios/ExportOptions.plist)
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>destination</key>
+	<string>export</string>
+	<key>method</key>
+	<string>app-store</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.example.flutterTemplate0510</key>    
+		<string>flutter_temp0804-2</string>     
+	</dict>
+	<key>signingCertificate</key>
+	<string>Apple Distribution</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>stripSwiftSymbols</key>
+	<true/>
+	<key>teamID</key>
+	<string>FNUWZDVK8P</string>
+	<key>uploadBitcode</key>
+	<false/>
+	<key>exportSymbols</key>
+	<true/>
+</dict>
+</plist>
+```
