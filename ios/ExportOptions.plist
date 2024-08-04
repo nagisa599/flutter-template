@@ -13,7 +13,7 @@
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>com.example.flutterTemplate0510</key>  
-		<string>distribution</string>     
+		<string>flutter_template0804</string>     
 	</dict>
 	<key>signingStyle</key>
 	<string>automatic</string>
