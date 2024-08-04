@@ -23,7 +23,7 @@ github actionsを利用している。現在はiosのみに対応しているが
 
 ## build-ios
 
-[以下のファイルを変更](../ios/ExportOptions.plist)
+[ios/ExportOptions.plist](../ios/ExportOptions.plist)を変更
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -35,8 +35,8 @@ github actionsを利用している。現在はiosのみに対応しているが
 	<string>app-store</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>com.example.flutterTemplate0510</key>    
-		<string>flutter_temp0804-2</string>     
+		<key>com.example.flutterTemplate0510</key>    　// バンドルid
+		<string>flutter_temp0804-2</string>           // provisioning profile
 	</dict>
 	<key>signingCertificate</key>
 	<string>Apple Distribution</string>
@@ -44,8 +44,8 @@ github actionsを利用している。現在はiosのみに対応しているが
 	<string>manual</string>
 	<key>stripSwiftSymbols</key>
 	<true/>
-	<key>teamID</key>
-	<string>FNUWZDVK8P</string>
+	<key>teamID</key> 
+	<string>FNUWZDVK8P</string>                          // 認証鍵を持っている人の名前
 	<key>uploadBitcode</key>
 	<false/>
 	<key>exportSymbols</key>
@@ -53,3 +53,7 @@ github actionsを利用している。現在はiosのみに対応しているが
 </dict>
 </plist>
 ```
+
+
+## 参考記事
+https://zenn.dev/pressedkonbu/articles/254ca2fc3cd1ab
