@@ -56,4 +56,4 @@ github actionsを利用している。現在はiosのみに対応しているが
 
 
 ## 参考記事
-https://zenn.dev/pressedkonbu/articles/254ca2fc3cd1ab
+[iod-build参考記事](https://zenn.dev/pressedkonbu/articles/254ca2fc3cd1ab)
