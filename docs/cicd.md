@@ -23,7 +23,7 @@ github actionsを利用している。現在はiosのみに対応しているが
 
 ## build-ios
 
-以下のファイルを変更(../ios/ExportOptions.plist)
+[以下のファイルを変更](../ios/ExportOptions.plist)
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
