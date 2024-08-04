@@ -74,4 +74,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr create -B main -t "Release ${{ env.BUMP_VERSION }}" -b "リリースおめでと!${{ github.event.inputs.bump }}のリリースです。バージョンは${{ env.BUMP_VERSION }}です。" --head ${{ env.RELEASE_BRANCH }}
+          gh pr create -B develop -t "Release ${{ env.BUMP_VERSION }}" -b "リリースおめでと!${{ github.event.inputs.bump }}のリリースです。バージョンは${{ env.BUMP_VERSION }}です。" --head ${{ env.RELEASE_BRANCH }}
