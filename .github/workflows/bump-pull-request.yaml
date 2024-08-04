@@ -63,8 +63,8 @@ jobs:
 
       - name: Fetch and Rebase
         run: |
-          git fetch origin main
-          git rebase origin/main
+          git fetch origin develop
+          git rebase origin/develop
 
       - name: Push the branch
         run: |
