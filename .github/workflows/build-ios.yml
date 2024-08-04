@@ -1,4 +1,4 @@
-name: deliver
+name: build
 
 on:
   push:
