@@ -1,4 +1,4 @@
-name: tagging when merged
+name: Tagging on merge to main
 
 on:
   pull_request:
@@ -11,20 +11,20 @@ permissions:
   contents: write
 
 jobs:
-  tagged:
-    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'releases/')
+  tag-and-release:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     timeout-minutes: 30
     steps:
-      - name: checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: get version from pubspec.yaml
+      - name: Get version from pubspec.yaml
         run: |
-          echo "BUMP_VERSION=$(sed -n 's/^version: *\([^ ]*\) *$/\1/p' pubspec.yaml)" >> $GITHUB_ENV
+          echo "VERSION=$(sed -n 's/^version: *\([^ ]*\) *$/\1/p' pubspec.yaml)" >> $GITHUB_ENV
 
-      - name: create tag and release note
+      - name: Create tag and release note
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create v$BUMP_VERSION --generate-notes
+          gh release create v$VERSION --generate-notes
