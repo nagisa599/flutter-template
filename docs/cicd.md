@@ -20,3 +20,44 @@ github actionsを利用している。現在はiosのみに対応しているが
   <img src="https://github.com/user-attachments/assets/0f2966b3-3bfa-4140-a758-04f835609f23" width="300" height="300">
  
 ## tagging-when-merged.yml
+
+## build-ios
+
+[ios/ExportOptions.plist](../ios/ExportOptions.plist)を変更
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>destination</key>
+	<string>export</string>
+	<key>method</key>
+	<string>app-store</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.example.flutterTemplate0510</key>    　// バンドルid
+		<string>flutter_temp0804-2</string>           // provisioning profile
+	</dict>
+	<key>signingCertificate</key>
+	<string>Apple Distribution</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>stripSwiftSymbols</key>
+	<true/>
+	<key>teamID</key> 
+	<string>FNUWZDVK8P</string>                          // 認証鍵を持っている人の名前
+	<key>uploadBitcode</key>
+	<false/>
+	<key>exportSymbols</key>
+	<true/>
+</dict>
+</plist>
+``
+こちらのprovidisoing　profileとBundle Indentiferと同じになる。
+<img width="1000" height="300" alt="スクリーンショット 2024-08-04 17 44 11" src="https://github.com/user-attachments/assets/082f3ab1-1049-4e0d-8daf-f12ddbce0f18">
+
+
+
+
+## 参考記事
+[iod-build参考記事](https://zenn.dev/pressedkonbu/articles/254ca2fc3cd1ab)
