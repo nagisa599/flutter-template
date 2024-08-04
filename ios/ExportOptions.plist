@@ -16,7 +16,7 @@
 		<string>flutter_temp0804-2</string>     
 	</dict>
 	<key>signingStyle</key>
-	<string>automatic</string>
+	<string>manual</string>
 	<key>stripSwiftSymbols</key>
 	<true/>
 	<key>teamID</key>
