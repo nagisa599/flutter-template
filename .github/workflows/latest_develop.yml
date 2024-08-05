@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - main
-
+env:
+  GIT_USER_EMAIL: "41898282+version管理くんからの通知です@users.noreply.github.com"
+  GIT_USER_NAME: "version管理くん"
 jobs:
   sync-develop:
     runs-on: ubuntu-latest
