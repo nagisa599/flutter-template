@@ -22,3 +22,9 @@
 -	<string>Sample App</string>
 +	<string>New Sample App</string>
 ```
+
+3.  CI/CDのsercretと権限のリポジトリーのsettingを変更する。
+- [CI/CDについて](./cicd.md)
+
+4. Auth0の設定
+- [Auth0について](./auth0.md)
