@@ -24,6 +24,8 @@ mainにbump ppull requestで出したpull requestをmergeするとリリース�
 ## build.yaml
 > [!CAUTION]
 > 実際は、tagが生成されたタイミングでbuildされるが、うまくCIが回らないためissueとして残しておく。
+
+
 iosのapple store connectにアプリをあげるgithubaction
 [ios/ExportOptions.plist](../ios/ExportOptions.plist)を変更
 ```
