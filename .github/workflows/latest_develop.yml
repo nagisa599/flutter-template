@@ -1,0 +1,25 @@
+name: Update develop branch after main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-develop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v3
+        with:
+          ref: "main"
+          fetch-depth: 0
+
+      - name: Merge main to develop
+        run: |
+          git config user.name ${{ env.GIT_USER_NAME }}
+          git config user.email ${{ env.GIT_USER_EMAIL }}
+          git fetch origin develop
+          git checkout develop
+          git merge main --no-ff -m "Sync develop with main after changes"
+          git push origin develop
