@@ -18,6 +18,7 @@ jobs:
         with:
           ref: "main"
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }} # トークンを追加
 
       - name: Merge main to develop
         run: |
@@ -26,5 +27,5 @@ jobs:
           git fetch origin develop
           git checkout develop
           git merge main --no-ff -m "Sync develop with main after changes"
-          git push origin develop
+          git push origin develop  # push の際にトークンを使用
         shell: bash
