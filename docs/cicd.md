@@ -20,9 +20,11 @@ github actionsを利用している。現在はiosのみに対応しているが
   <img src="https://github.com/user-attachments/assets/0f2966b3-3bfa-4140-a758-04f835609f23" width="300" height="300">
  
 ## tagging-when-merged.yml
-
-## build-ios
-
+mainにbump ppull requestで出したpull requestをmergeするとリリースのタグを生成する
+## build.yaml
+> [!CAUTION]
+> 実際は、tagが生成されたタイミングでbuildされるが、うまくCIが回らないためissueとして残しておく。
+iosのapple store connectにアプリをあげるgithubaction
 [ios/ExportOptions.plist](../ios/ExportOptions.plist)を変更
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -55,6 +57,7 @@ github actionsを利用している。現在はiosのみに対応しているが
 ``
 こちらのprovidisoing　profileとBundle Indentiferと同じになる。
 <img width="1000" height="300" alt="スクリーンショット 2024-08-04 17 44 11" src="https://github.com/user-attachments/assets/082f3ab1-1049-4e0d-8daf-f12ddbce0f18">
+
 
 
 
