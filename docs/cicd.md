@@ -21,6 +21,8 @@ github actionsを利用している。現在はiosのみに対応しているが
  
 ## tagging-when-merged.yml
 mainにbump ppull requestで出したpull requestをmergeするとリリースのタグを生成する
+<img width="500" alt="スクリーンショット 2024-08-06 8 26 17" src="https://github.com/user-attachments/assets/d527536c-b23c-475e-9e0c-e25ae44e9cd9">
+
 ## build.yaml
 > [!CAUTION]
 > 実際は、tagが生成されたタイミングでbuildされるが、うまくCIが回らないためissueとして残しておく。
