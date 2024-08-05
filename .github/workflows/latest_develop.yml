@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+env:
+  GIT_USER_EMAIL: "41898282+version管理くんからの通知です@users.noreply.github.com"
+  GIT_USER_NAME: "version管理くん"
+
 jobs:
   sync-develop:
     runs-on: ubuntu-latest
@@ -17,9 +21,10 @@ jobs:
 
       - name: Merge main to develop
         run: |
-          git config user.name ${{ env.GIT_USER_NAME }}
-          git config user.email ${{ env.GIT_USER_EMAIL }}
+          git config --global user.name "${{ env.GIT_USER_NAME }}"
+          git config --global user.email "${{ env.GIT_USER_EMAIL }}"
           git fetch origin develop
           git checkout develop
           git merge main --no-ff -m "Sync develop with main after changes"
           git push origin develop
+        shell: bash
