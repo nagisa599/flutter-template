@@ -63,7 +63,7 @@ iosのapple store connectにアプリをあげるgithubaction
 	<true/>
 </dict>
 </plist>
-``
+```
 こちらのprovidisoing　profileとBundle Indentiferと同じになる。
 <img width="1000" height="300" alt="スクリーンショット 2024-08-04 17 44 11" src="https://github.com/user-attachments/assets/082f3ab1-1049-4e0d-8daf-f12ddbce0f18">
 
