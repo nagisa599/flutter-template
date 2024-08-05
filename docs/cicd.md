@@ -13,6 +13,11 @@ github actionsを利用している。現在はiosのみに対応しているが
 
   
 ## bump pull request.yml (チーム開発用)
+> [!WARNING]
+> githunのレポジトリー権限で引っかかる可能性がある。setting->action->general->Workflow permissionsをRead and write permissionsをチェックを入れる
+
+
+
 - アプリバージョンの更新を含む release ブランチと Pull Request を作成する
 - releases/1.0.0+1 のようなブランチを作成する
 チーム開発や Protected branch を使っている環境を想定したワークフロー
