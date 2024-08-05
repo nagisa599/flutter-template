@@ -76,3 +76,4 @@ iosのapple store connectにアプリをあげるgithubaction
 
 ## 参考記事
 [iod-build参考記事](https://zenn.dev/pressedkonbu/articles/254ca2fc3cd1ab)
+[flutterのworkflow参考記事](https://zenn.dev/yorifuji/articles/flutter-github-actions-template)
