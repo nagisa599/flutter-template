@@ -68,6 +68,9 @@ iosのapple store connectにアプリをあげるgithubaction
 <img width="1000" height="300" alt="スクリーンショット 2024-08-04 17 44 11" src="https://github.com/user-attachments/assets/082f3ab1-1049-4e0d-8daf-f12ddbce0f18">
 
 
+## latest_develop.yml
+- mainにmergeされたタイミングでdevelopにその変更を反映する。
+- 実際には、developから生やしたrelese/v12.04.1からmainにmergeするがその際にversionがdevelopが反映されないため行う。
 
 
 
